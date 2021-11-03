@@ -1,14 +1,14 @@
 //Importo modelo de datos
 const db = require("../models");
 const pedido = db.pedido;
-const Op = db.Sequelize.Op; //Import all ORM sequelize functions 
+const Op = db.Sequelize.Op; 
 
-const PedidoController = {}; //Create the object controller
+const PedidoController = {};
 
 
-//CRUD end-points Functions
+//CRUD endpoints pedidos
 //-------------------------------------------------------------------------------------
-//GET all categories from database
+//GET todos los pedidos de database
 PedidoController.getAll = (req, res) => {
     const type = req.query.type;
     var condition = type ? { type: { [Op.like]: `%${type}%` } } : null;
@@ -27,7 +27,7 @@ PedidoController.getAll = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//GET categories by Id from database
+//GET pedidos por ID en database
 PedidoController.getById = (req, res) => {
     const id = req.params.id;
   
@@ -50,9 +50,9 @@ PedidoController.getById = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//CREATE a new pedido in database
+//CREATE un nuevo pedido en database
 PedidoController.create = (req, res) => {
-    // Validate request
+    
     if (!req.body.type) {
       res.status(400).send({
         message: "Content can not be empty!"
@@ -60,13 +60,13 @@ PedidoController.create = (req, res) => {
       return;
     }
   
-    // Create a pedido
+    
     const newpedido = {
       type: req.body.type,
       age: req.body.age
     };
   
-    // Save pedido in the database
+    
     pedido.create(newpedido)
       .then(data => {
         res.send(data);
@@ -81,7 +81,7 @@ PedidoController.create = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//UPDATE a pedido from database
+//UPDATE pedidos de database
 PedidoController.update = (req, res) => {
     const id = req.params.id;
   
@@ -108,8 +108,7 @@ PedidoController.update = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//GET categories by Type from database  
-//FindByType
+//GET pedidos por TYPE en database  
 PedidoController.getByType = (req, res) => {
     pedido.findAll({ where: { type: req.params.type } })
       .then(data => {
@@ -125,7 +124,7 @@ PedidoController.getByType = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//DELETE a pedido by Id from database
+//DELETE pedidos por Id de database
 PedidoController.delete = (req, res) => {
     const id = req.params.id;
   
@@ -152,8 +151,7 @@ PedidoController.delete = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//DELETE all categories from database
-//delete all categories   
+//DELETE todos los pedidos de database   
 PedidoController.deleteAll = (req, res) => {
     pedido.destroy({
       where: {},

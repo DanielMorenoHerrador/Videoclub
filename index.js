@@ -26,9 +26,9 @@ app.use(cors(corsOptions)); //Add CORS Middleware
 app.get('/', (req, res) => {res.send('Bienvenidos a Express');});
 app.use(router);
 
-//Connecting to the database
+//Conectar con base de datos
 db.then(()=>{
-    //Starting server
+    //Iniciar servidor
         app.listen(PORT, ()=> console.log(`Server on port ${PORT}`.bgGreen.black));
     })
     .catch((err)=> console.log(err.message));   

@@ -4,61 +4,61 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     
       await queryInterface.bulkInsert('peliculas', [{
-        title : "Train to Busan",
+        title : "Venom: Habrá Matanza",
         pedidoId : 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        title : "Shaun of the dead",
+        title : "Spider-man: No Way Home",
         pedidoId : 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        title : "ZombieLand",
+        title : "Spiral",
         pedidoId : 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        title : "Evil Dead",
-        pedidoId : 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        title : "Evil Dead 2",
-        pedidoId : 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        title : "Evil Dead 3",
-        pedidoId : 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        title : "28 Days Later",
-        pedidoId : 2,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        title : "Zombiever",
+        title : "Uncharted",
         pedidoId : 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        title : "Overlord",
-        pedidoId : 2,
+        title : "Loki",
+        pedidoId : 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        title : "Black Sheep",
+        title : "One Piece",
+        pedidoId : 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        title : "Dragon ball: Broly",
+        pedidoId : 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        title : "Los Vengadores: Endgame",
+        pedidoId : 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        title : "Venom",
+        pedidoId : 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        title : "Soy programador: La Pelicula",
         pedidoId : 1,
         createdAt: new Date(),
         updatedAt: new Date()

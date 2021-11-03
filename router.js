@@ -3,7 +3,7 @@ const router = require('express').Router();
 // Middlewares
 const auth = require('./middlewares/auth');
 
-//Importamos Routes definidas en views
+//Importamos endpoints definidas en views
 const PeliculasRouter = require('./views/PeliculaRouter');
 const PedidosRouter = require('./views/PedidoRouter');
 const UserRouter = require('./views/UserRouter');

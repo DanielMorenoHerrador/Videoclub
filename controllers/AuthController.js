@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const authConfig = require('../config/auth');
 
-const AuthController = {}; //Create the object controller
+const AuthController = {};
 
 //-------------------------------------------------------------------------------------
 //Login user with database
@@ -27,7 +27,7 @@ AuthController.signIn = (req, res) =>{
                         token: token
                     })
                 } else {
-                    // Unauthorized Access
+                    // Acceso denegado
                     res.status(401).json({ msg: "Contraseña incorrecta" })
                 }
             }
@@ -38,8 +38,7 @@ AuthController.signIn = (req, res) =>{
 
 
 //-------------------------------------------------------------------------------------
-//REGISTER new user in database
-//create user
+//REGISTER nuevo usuario en database
 AuthController.signUp = (req, res)=> {
 
         // Encriptamos la contraseña

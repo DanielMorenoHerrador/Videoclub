@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-//Importo modelo de datos
+//Importar modelo de datos
 const PeliculasController = require('../controllers/PeliculaController');
 
-// End-points CRUD movies
+// Endpoints CRUD peliculas
 router.get('/', PeliculasController.getAll);
 router.get('/:id', PeliculasController.getById);
 router.get('/name/:title', PeliculasController.getByTitle);

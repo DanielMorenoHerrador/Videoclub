@@ -1,17 +1,17 @@
 //Importo modelo de datos
 const db = require("../models");
 const peliculas = db.pelicula;
-const Op = db.Sequelize.Op; //Import all ORM sequelize functions 
+const Op = db.Sequelize.Op;  
 
-var pedidoModel  = require('../models').pedido;  //Add for dependency response
+var pedidoModel  = require('../models').pedido;  
 
-const PeliculaController = {}; //Create the object controller
+const PeliculaController = {}; 
 
 
 
-//CRUD end-points Functions
+//CRUD endpoints peliculas
 //-------------------------------------------------------------------------------------
-//GET all peliculas from database
+//GET all peliculas de database
 PeliculaController.getAll = (req, res) => {
     
     peliculas.findAll({include: [{ model:pedidoModel}]})
@@ -28,7 +28,7 @@ PeliculaController.getAll = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//GET peliculas by Id from database
+//GET peliculas por Id de database
 PeliculaController.getById = (req, res) => {
     const id = req.params.id;
 
@@ -52,7 +52,7 @@ PeliculaController.getById = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//CREATE a new movie in database
+//CREATE una nueva pelicula database
 PeliculaController.create = (req, res) => {
     // Validate request
     if (!req.body.title) {
@@ -62,13 +62,13 @@ PeliculaController.create = (req, res) => {
       return;
     }
   
-    // Create a peliculas
+    // Crear la pelicula
     const newPelicula = {
       title: req.body.title,
       categoryId: req.body.categoryId
     };
   
-    // Save peliculas in the database
+    // Guardar pelicula en database
     peliculas.create(newPelicula)
       .then(data => {
         res.send(data);
@@ -83,7 +83,7 @@ PeliculaController.create = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//UPDATE a movie from database
+//Actualizar las peliculas de la database
 PeliculaController.update = (req, res) => {
     const id = req.params.id;
   
@@ -110,8 +110,7 @@ PeliculaController.update = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//GET movie by Title from database 
-//FindByTitle
+//GET pelicula por titulo en database 
 PeliculaController.getByTitle = (req, res) => {
     peliculas.findAll({ where: { title: req.params.title } })
       .then(data => {
@@ -127,7 +126,7 @@ PeliculaController.getByTitle = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//DELETE a movie by Id from database
+//DELETE la pelicula de database
 PeliculaController.delete = (req, res) => {
     const id = req.params.id;
   
@@ -154,7 +153,7 @@ PeliculaController.delete = (req, res) => {
 
 
 //-------------------------------------------------------------------------------------
-//DELETE all peliculas from database
+//DELETE todas las peliculas de database
 //delete all peliculas 
 PeliculaController.deleteAll = (req, res) => {
     peliculas.destroy({
