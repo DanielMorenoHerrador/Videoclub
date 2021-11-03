@@ -58,3 +58,22 @@ PUT - localhost:3000/categories:id
 DELETE - localhost:3000/categories
 DELETE - localhost:3000/categories:id
 ```
+
+# PROYECTO VIDEOCLUB API:floppy_disk:
+
+## :feet:Autor: Daniel Moreno  :calendar:Fecha: 03/11/2021
+
+## ¿En que consiste el proyecto?
+
+El proyecto se realiza mediante Express, Sequelize, Mysql y jwt, creando con estas tecnologias una API sobre un videoclub donde lo forman varias películas y pedidos que las personas pueden realizar.
+Para las comprobaciones del correcto funcionamiento de la API, se ha utilizado VSC y POSTMAN:runner:.
+
+![image](https://user-images.githubusercontent.com/90707206/140200632-a539b950-3190-4a55-b99e-b81416ec686e.png)
+
+
+En esta API se pueden consultar las peliculas disponibles, los pedidos relizados y loggearse como usuario, ya que este ultimo es necesario para poder consultar las librerias
+por la introduccion de JWT en este proyecto:closed_lock_with_key:.
+
+![image](https://user-images.githubusercontent.com/90707206/140200768-d8cb7a66-91af-4a74-bdf7-514d32f4746f.png)
+
+El proyecto esta desplegado en Heroku, aqui teneis el enlace: https://videoclub-1.herokuapp.com/ :boom:
