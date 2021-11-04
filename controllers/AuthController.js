@@ -5,6 +5,24 @@ const authConfig = require('../config/auth');
 
 const AuthController = {};
 
+//GET todos los pedidos de database
+AuthController.getAll = (req, res) => {
+    const type = req.query.type;
+    var condition = type ? { type: { [Op.like]: `%${type}%` } } : null;
+
+    user.findAll({ where: condition })
+    .then(data => {
+        res.send(data);
+    })
+    .catch(err => {
+        res.status(500).send({
+        message:
+            err.message || "Some error occurred while retrieving categories."
+        });
+    });
+};
+
+
 //-------------------------------------------------------------------------------------
 //Login user with database
 //get user
