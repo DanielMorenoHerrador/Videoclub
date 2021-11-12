@@ -11,7 +11,7 @@
     "username": "root",
     "password": "root",
     "database": "database_test",
-    "host": "192.168.21.142",
+    "host": "172.16.11.252",
     "dialect": "mysql"
   },
   "production": {

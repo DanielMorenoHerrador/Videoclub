@@ -9,7 +9,7 @@ const PedidosRouter = require('./views/PedidoRouter');
 const UserRouter = require('./views/UserRouter');
 
 //Rutas
-router.use('/api', UserRouter); //Login and register routes
+router.use('/users', UserRouter); //Login and register routes
 router.use('/peliculas',auth, PeliculasRouter); //add auth
 router.use('/pedidos',auth, PedidosRouter);
 

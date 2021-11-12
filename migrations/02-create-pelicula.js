@@ -11,6 +11,10 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
+      genero: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       pedidoId: {
         type: Sequelize.INTEGER,
         references: {

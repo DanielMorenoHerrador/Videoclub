@@ -6,14 +6,20 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
       
-      pelicula.belongsTo(models.pedido, {
-        foreignKey: 'pedidoId'
+      this.hasMany(models.pedido, {
+        foreignKey: 'peliculaId'
       });
     }
   };
   pelicula.init({
-    title: DataTypes.STRING,
-    pedidoId: DataTypes.INTEGER
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    genero: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
     sequelize,
     modelName: 'pelicula',

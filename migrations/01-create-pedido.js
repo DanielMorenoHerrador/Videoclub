@@ -8,14 +8,29 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      type: {
-        type: Sequelize.STRING
+      userId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
-      createdAt: {
+      movieId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'movies',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
+      },
+      rentDate: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      returnDate: {
         allowNull: false,
         type: Sequelize.DATE
       }

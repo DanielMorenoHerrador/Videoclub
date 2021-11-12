@@ -9,17 +9,44 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      dni: {
+        type: DataTypes.STRING.INTEGER,
+        allowNull: false
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+      },
+      adress: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      city: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      cp: {
+        type: DataTypes.STRING.INTEGER,
         allowNull: false
       },
       password: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false
       },
-      email: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true
+      repeat_password: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      phone: {
+        type: DataTypes.STRING.INTEGER,
+        allowNull: false
+      },
+      admin: {
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,

@@ -22,12 +22,74 @@ AuthController.getAll = (req, res) => {
     });
 };
 
+//-------------------------------------------------------------------------------------
+//GET users by City from database 
+//FindByCity
+AuthController.getByCity = (req, res) => {
+    users.findAll({ where: { city: req.params.city } })
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while retrieving Users."
+            });
+        });
+};
+
+//-------------------------------------------------------------------------------------
+//DELETE a user in database
+//deleteUser
+AuthController.deleteUser = (req, res) => {
+    const id = req.params.id;
+
+    users.destroy({
+        where: { id: id }
+    })
+        .then(num => {
+            if (num == 1) {
+                res.send({
+                    message: "User was deleted successfully!"
+                });
+            } else {
+                res.send({
+                    message: `Cannot delete User with id=${id}. Maybe User was not found!`
+                });
+            }
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Could not delete User with id=" + id
+            });
+        });
+};
+
+//-------------------------------------------------------------------------------------
+//DELETE ALL Non Admin users in database
+//deleteAll
+AuthController.deleteAll = (req, res) => {
+    users.destroy({
+        where: {},
+        truncate: false
+    })
+        .then(nums => {
+            res.send({ message: `${nums} Users were deleted successfully!` });
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while removing all users."
+            });
+        });
+};
 
 //-------------------------------------------------------------------------------------
 //Login user with database
 //get user
 AuthController.signIn = (req, res) =>{
         let { email, password } = req.body;
+        console.log("Soy fyuktykutyku" ,req.body);
         // Buscar usuario
         user.findOne({ where: { email: email }
         }).then(user => {
@@ -65,18 +127,24 @@ AuthController.signUp = (req, res)=> {
         // Crear un usuario
         user.create({
             name: req.body.name,
+            dni: req.body.dni,
             email: req.body.email,
-            password: password
+            adress: req.body.adress,
+            city: req.body.city,
+            cp: req.body.cp,
+            password: password,
+            repeat_password: password,
+            phone: req.body.phone,
         }).then(user => {
 
             // Creamos el token
-            let token = jwt.sign({ user: user }, authConfig.secret, {
-                expiresIn: authConfig.expires
-            });
+            // let token = jwt.sign({ user: user }, authConfig.secret, {
+            //     expiresIn: authConfig.expires
+            // });
 
             res.json({
                 user: user,
-                token: token
+                // token: token
             });
 
         }).catch(err => {

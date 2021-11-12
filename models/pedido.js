@@ -7,15 +7,34 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
       
-      this.hasMany(models.pelicula,{
-        foreignKey:'pedidoId'
+      this.belongsTo(models.pelicula, {
+        foreignKey: 'peliculaId'
+      });
+      this.belongsTo(models.user, {
+        foreignKey: 'userId'
       });
     }
   };
   pedido.init({
-    type: DataTypes.STRING,
+    userId: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    movieId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    rentDate: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    returnDate: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
   }, {
     sequelize,
+    timestamps: false,
     modelName: 'pedido',
   });
   return pedido;
