@@ -89,7 +89,7 @@ AuthController.deleteAll = (req, res) => {
 //get user
 AuthController.signIn = (req, res) =>{
         let { email, password } = req.body;
-        console.log("Soy fyuktykutyku" ,req.body);
+        console.log(req.body);
         // Buscar usuario
         user.findOne({ where: { email: email }
         }).then(user => {

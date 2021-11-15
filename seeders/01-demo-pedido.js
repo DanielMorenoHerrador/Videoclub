@@ -5,36 +5,44 @@ module.exports = {
   
       await queryInterface.bulkInsert('pedidos', [{
       userId: 1,
-      movieId: 2,
+      peliculaId: 2,
       rentDate: new Date(),
+      returnDate: new Date(),
     }, {
       userId: 2,
-      movieId: 3,
+      peliculaId: 3,
       rentDate: new Date(),
+      returnDate: new Date(),
     }, {
       userId: 3,
-      movieId: 9,
+      peliculaId: 9,
       rentDate: new Date(),
+      returnDate: new Date(),
     }, {
       userId: 4,
-      movieId: 11,
+      peliculaId: 11,
       rentDate: new Date(),
+      returnDate: new Date(),
     }, {
       userId: 5,
-      movieId: 15,
+      peliculaId: 15,
       rentDate: new Date(),
+      returnDate: new Date(),
     }, {
       userId: 6,
-      movieId: 16,
+      peliculaId: 16,
       rentDate: new Date(),
+      returnDate: new Date(),
     }, {
       userId: 7,
-      movieId: 1,
+      peliculaId: 1,
       rentDate: new Date(),
+      returnDate: new Date(),
     }, {
       userId: 8,
-      movieId: 5,
+      peliculaId: 5,
       rentDate: new Date(),
+      returnDate: new Date(),
     }
     ], {});
   },

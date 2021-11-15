@@ -29,6 +29,6 @@ app.use(router);
 //Conectar con base de datos
 db.then(()=>{
     //Iniciar servidor
-        app.listen(PORT, ()=> console.log(`Server on port ${PORT}`.bgGreen.black));
+        app.listen(PORT, ()=> console.log(`Server on port ${PORT}`.bgYellow.black));
     })
     .catch((err)=> console.log(err.message));   

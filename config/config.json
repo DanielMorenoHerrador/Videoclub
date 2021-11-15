@@ -2,8 +2,8 @@
   "development": {
     "username": "remote",
     "password": "5118Siempre",
-    "database": "database_development",
-    "host": "192.168.21.142",
+    "database": "videoclub_db",
+    "host": "172.16.8.194",
     "port": "3306",
     "dialect": "mysql"
   },

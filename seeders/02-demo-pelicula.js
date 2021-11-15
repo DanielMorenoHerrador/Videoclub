@@ -5,61 +5,61 @@ module.exports = {
     
       await queryInterface.bulkInsert('peliculas', [{
         title : "Venom: Habrá Matanza",
-        pedidoId : 1,
+        genero: "Accion",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "Spider-man: No Way Home",
-        pedidoId : 1,
+        genero: "Accion",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "Spiral",
-        pedidoId : 1,
+        genero: "Terror",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "Uncharted",
-        pedidoId : 1,
+        genero: "Aventura",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "Loki",
-        pedidoId : 1,
+        genero: "Ciencia Ficcion",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "One Piece",
-        pedidoId : 1,
+        genero: "Anime",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "Dragon ball: Broly",
-        pedidoId : 1,
+        genero: "Anime",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "Los Vengadores: Endgame",
-        pedidoId : 1,
+        genero: "Accion",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "Venom",
-        pedidoId : 1,
+        genero: "Accion",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         title : "Soy programador: La Pelicula",
-        pedidoId : 1,
+        genero: "Accion",
         createdAt: new Date(),
         updatedAt: new Date()
       }

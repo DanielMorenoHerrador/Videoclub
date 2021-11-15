@@ -10,19 +10,19 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-        references: {
-          model: 'users',
-          key: 'id'
-        },
+        // references: {
+        //   model: 'users',
+        //   key: 'id'
+        // },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
-      movieId: {
+      peliculaId: {
         type: Sequelize.INTEGER,
-        references: {
-          model: 'movies',
-          key: 'id'
-        },
+        // references: {
+        //   model: 'peliculas',
+        //   key: 'id'
+        // },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },

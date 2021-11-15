@@ -9,40 +9,40 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false
       },
       dni: {
-        type: DataTypes.STRING.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false
       },
       email: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false,
         unique: true
       },
       adress: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false
       },
       city: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false
       },
       cp: {
-        type: DataTypes.STRING.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false
       },
       password: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false
       },
       repeat_password: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false
       },
       phone: {
-        type: DataTypes.STRING.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false
       },
       admin: {

@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    movieId: {
+    peliculaId: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
