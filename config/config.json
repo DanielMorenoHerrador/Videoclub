@@ -1,24 +1,24 @@
 {
   "development": {
-    "username": "remote",
-    "password": "5118Siempre",
-    "database": "videoclub_db",
-    "host": "172.16.8.194",
+    "username": "b4b66be7109087",
+    "password": "8d1fa194",
+    "database": "heroku_45c97687dce77ca",
+    "host": "eu-cdbr-west-01.cleardb.com",
     "port": "3306",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "root",
-    "database": "database_test",
-    "host": "172.16.11.252",
+    "username": "b4b66be7109087",
+    "password": "8d1fa194",
+    "database": "heroku_45c97687dce77ca",
+    "host": "eu-cdbr-west-01.cleardb.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "remote",
-    "password": "5118Siempre",
-    "database": "database_production",
-    "host": "192.168.21.142",
+    "username": "b4b66be7109087",
+    "password": "8d1fa194",
+    "database": "heroku_45c97687dce77ca",
+    "host": "eu-cdbr-west-01.cleardb.com",
     "port": "3306",
     "dialect": "mysql"
   }
