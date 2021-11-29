@@ -53,7 +53,7 @@ PedidoController.getById = (req, res) => {
 //CREATE un nuevo pedido en database
 PedidoController.create = (req, res) => {
     
-    if (!req.body.type) {
+    if (!req.body.userId && !req.body.peliculaId) {
       res.status(400).send({
         message: "Content can not be empty!"
       });
