@@ -53,17 +53,19 @@ PedidoController.getById = (req, res) => {
 //CREATE un nuevo pedido en database
 PedidoController.create = (req, res) => {
     
-    if (!req.body.type) {
-      res.status(400).send({
-        message: "Content can not be empty!"
-      });
-      return;
+  if (!req.body.userId && !req.body.peliculaId) {
+    res.status(400).send({
+      message: "Content can not be empty!"
+    });
+    return;
     }
   
     
     const newpedido = {
-      type: req.body.type,
-      age: req.body.age
+      userId: req.body.userId,
+      movieId: req.body.movieId,
+      rentDate: new Date(),
+      returnDate: new Date(),
     };
   
     
