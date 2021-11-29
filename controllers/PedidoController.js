@@ -63,7 +63,7 @@ PedidoController.create = (req, res) => {
     
     const newpedido = {
       userId: req.body.userId,
-      movieId: req.body.movieId,
+      peliculaId: req.body.peliculaId,
       rentDate: new Date(),
       returnDate: new Date(),
     };
